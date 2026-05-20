@@ -46,7 +46,7 @@ function SharePage() {
               <Stat label="Berat ideal" value={`${payload.idealWeightKg.toFixed(1)} kg`} />
               <Stat label="Kalori / hari" value={`${payload.dailyCalories} kkal`} />
               <Stat label="Usia" value={`${payload.age} thn`} />
-              <Stat label="Aktivitas" value={ACTIVITY_LABELS[payload.activity].split(" ")[0]} />
+              <Stat label="Aktivitas" value={ACTIVITY_LABELS[payload.activity as keyof typeof ACTIVITY_LABELS].split(" ")[0]} />
             </div>
           </div>
         </Card>
