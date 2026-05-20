@@ -14,7 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      calculations: {
+        Row: {
+          activity_level: string
+          age: number
+          bmi: number
+          category: string
+          created_at: string
+          daily_calories: number
+          gender: string
+          height_cm: number
+          id: string
+          ideal_weight_kg: number
+          notes: string | null
+          user_id: string
+          weight_kg: number
+        }
+        Insert: {
+          activity_level?: string
+          age: number
+          bmi: number
+          category: string
+          created_at?: string
+          daily_calories: number
+          gender: string
+          height_cm: number
+          id?: string
+          ideal_weight_kg: number
+          notes?: string | null
+          user_id: string
+          weight_kg: number
+        }
+        Update: {
+          activity_level?: string
+          age?: number
+          bmi?: number
+          category?: string
+          created_at?: string
+          daily_calories?: number
+          gender?: string
+          height_cm?: number
+          id?: string
+          ideal_weight_kg?: number
+          notes?: string | null
+          user_id?: string
+          weight_kg?: number
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          unit_preference: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id: string
+          unit_preference?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          unit_preference?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      shared_results: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          id: string
+          payload: Json
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          id: string
+          payload: Json
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          payload?: Json
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
